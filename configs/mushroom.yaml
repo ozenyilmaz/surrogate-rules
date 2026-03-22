@@ -1,0 +1,50 @@
+# configs/mushroom.yaml
+# ─────────────────────────────────────────────────────────────
+# Experiment configuration for the Mushroom dataset.
+# Run with:  python scripts/run_experiment.py --config configs/mushroom.yaml
+# ─────────────────────────────────────────────────────────────
+
+dataset:
+  name: mushroom
+  path: data/mushroom.arff   # relative to project root
+  format: arff
+  target_column: class       # auto-detected if omitted
+
+preprocessing:
+  label_encoding: minus_one_plus_one
+  drop_na: true
+  train_test_split_ratio: 0.75
+  stratify: true
+
+forest:
+  n_estimators: 500
+  max_depth: 3
+
+solver:
+  lambda: 0.5
+  alpha: 0.05
+  time_limit_seconds: 180
+  backend: cbc
+  verbose: false
+  min_samples_per_rule: null
+
+
+cv:
+  enabled: true
+  n_splits: 5
+  shuffle: true
+
+storage:
+  enabled: false              # set true + MONGO_URI env var to persist
+  uri: mongodb://localhost:27017
+  database: results_db
+  collection: results_full
+  skip_existing: true
+
+run:
+  experiment_name: mushroom_baseline
+  start_seed: 42
+  num_seeds: 10
+  output_dir: outputs/mushroom
+  log_level: INFO
+  suppress_solver_output: true

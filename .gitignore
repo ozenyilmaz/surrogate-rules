@@ -1,0 +1,32 @@
+# Runtime outputs
+outputs/
+data/
+
+# Environments
+.venv/
+venv/
+
+# Logs & licenses
+*.log
+gurobi.log
+*.lic
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Tests
+.coverage
+htmlcov/
+.pytest_cache/

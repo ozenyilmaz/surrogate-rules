@@ -1,0 +1,28 @@
+# Core scientific stack
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+scikit-learn>=1.3
+
+# Optimization  (at least one backend required)
+# Install all three for maximum flexibility, or just pulp for zero-licence usage.
+gurobipy>=10.0        # optional: commercial, fastest
+pyscipopt>=4.0        # optional: free for academic use
+pulp>=2.7             # required fallback: free, CBC bundled, no licence
+
+# Configuration
+pydantic>=2.0
+pyyaml>=6.0
+
+# Storage
+pymongo>=4.5
+
+# CLI
+# (argparse is stdlib, no extra needed)
+
+# Testing
+pytest>=7.4
+pytest-cov>=4.1
+
+# Optional: mock MongoDB for tests
+mongomock>=4.1
