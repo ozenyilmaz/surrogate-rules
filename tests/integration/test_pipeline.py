@@ -4,7 +4,7 @@ tests/integration/test_pipeline.py
 Integration tests for the end-to-end pipeline.
 
 These tests run the full pipeline on a tiny synthetic dataset so they do NOT
-require a Gurobi licence or a running MongoDB instance.
+require a Gurobi licence or a running MongoDB instance
 
 Gurobi mock strategy
 --------------------
